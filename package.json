@@ -1,0 +1,23 @@
+{
+  "name": "tiny-injector",
+  "version": "1.0.0",
+  "description": "Easy and simple injector and resolve dependendies",
+  "main": "build/main.js",
+  "repository": "git@aurelianosza:aurelianosza/tiny-injector.git",
+  "author": "Aureliano Neto <aurelianosza@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/main.js",
+    "build-start": "tsc && node build/main.js"
+  },
+  "dependencies": {
+    "@types/node": "^24.2.1",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.2"
+  }
+}
