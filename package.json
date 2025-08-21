@@ -1,6 +1,6 @@
 {
   "name": "tiny-injector",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Easy and simple injector and resolve dependendies",
   "main": "build/main.js",
   "repository": "git@aurelianosza:aurelianosza/tiny-injector.git",
@@ -9,13 +9,21 @@
   "scripts": {
     "build": "tsc",
     "start": "node build/main.js",
-    "build-start": "tsc && node build/main.js"
+    "build-start": "tsc && node build/main.js",
+    "test": "jest --verbose"
   },
   "dependencies": {
     "@types/node": "^24.2.1",
-    "reflect-metadata": "^0.2.2"
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.2.2",
+    "ts-match-case": "^0.0.3"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@types/lodash": "^4.17.20",
+    "@types/mocha": "^10.0.10",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
     "typescript": "^5.9.2"

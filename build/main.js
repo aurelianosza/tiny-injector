@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const decorators_1 = require("./provider/decorators");
-const provider_1 = require("./provider/provider");
 require("reflect-metadata");
 class Logger {
     constructor() { }
@@ -41,8 +40,10 @@ UserController = __decorate([
     (0, decorators_1.Injectable)(),
     __metadata("design:paramtypes", [UserRepository, Logger])
 ], UserController);
-const provider = provider_1.Provider.getInstance()
-    .register("logger", Logger)
-    .register("userRepository", new UserRepository(new Logger()));
-const userController = provider.resolve(UserController);
-console.log(userController.showUser(1));
+const IBankAccountInterface = Symbol("BankAccountInterface");
+console.log(typeof IBankAccountInterface);
+// const provider = Provider.getInstance()
+//     .register("logger", Logger)
+//     .register("userRepository", new UserRepository(new Logger()));
+// const userController = provider.resolve(UserController);
+// userController.showUser(1);
